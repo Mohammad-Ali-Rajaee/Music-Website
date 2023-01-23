@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="/build/play.css" />
+    <script src="/src/js/play.js" defer></script>
+    <link rel="shortcut icon" href="/src/img/icon.png" type="image/png" />
+  </head>
+  <body class="w-full h-full relative">
+    <div class="p-container flex w-full h-full flex-wrap md:min-h-screen md:pb-16">
+      <aside class="lg:w-1/4 lg:block hidden text-white h-full">
+        <div class="aside_header font-medium text-xl px-5">
+          <h2 class="mt-4 mb-5">Playlists</h2>
+        </div>
+        <div class="recommend mt-10 mb-5 text-sm flex flex-col gap-2 px-5">
+          <div class="active flex items-center gap-2 cursor-pointer ml-8">
+            <span class="material-symbols-outlined pause"> music_note </span>
+            <h4>Playlist</h4>
+          </div>
+          <div class="flex items-center gap-2 cursor-pointer ml-8">
+            <span class="material-symbols-outlined pause"> music_note </span>
+            <h4>Last Listening</h4>
+          </div>
+          <div class="flex items-center gap-2 cursor-pointer ml-8">
+            <span class="material-symbols-outlined pause"> music_note </span>
+            <h4>Recommended</h4>
+          </div>
+        </div>
+        <div class="song-scroll">
+          
+        </div>
+        <div class="songs pb-8"></div>
+      </aside>
+      <main class="lg:w-3/4 w-full h-full pb-2 gap-4">
+        <header class="w-full flex flex-col px-5 pt-4">
+          <div class="above flex items-center justify-between">
+            <ul
+              class="header_menu h-full flex items-center justify-between text-white w-5/12"
+            >
+              <li class="h-full pb-1 active">Discover</li>
+              <li class="h-full pb-1">My Library</li>
+              <li class="h-full pb-1">Radio</li>
+            </ul>
+            <form class="w-1/2 flex items-center relative">
+              <div class="w-full flex items-center">
+                <input
+                  class="w-full pl-5 h-full focus-within:outline-none placeholder:text-white text-white"
+                  type="text"
+                  placeholder="Search ... "
+                />
+                <button
+                  class="i-search absolute right-0 h-full flex items-center justify-center text-xl text-white"
+                ></button>
+              </div>
+            </form>
+          </div>
+          <div class="main-music w-1/2 flex flex-col pt-5">
+            <div class="name text-white font-semibold text-2xl">
+              Alan Walker - Fade
+            </div>
+            <p class="text-sm font-normal m-1 line-clamp-3">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elib Quasi
+              cumque facilis sint commodi porro n esciunt harum suscipit maxime
+              laudantium ea.
+            </p>
+            <div class="buttons flex w-full mt-3 gap-2 items-center">
+              <button class="play_fade w-32 rounded-full h-9">
+                Play
+              </button>
+              <button class="w-32 rounded-full h-9">
+                Follow
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div class="categories text-white px-5">
+          <div class="cat-header flex items-center justify-between pt-4 pb-2">
+            <h4 class="font-semibold text-xl">Popular Songs</h4>
+            <div class="leftRight">
+              <button class="cat-scroll_back material-symbols-outlined">arrow_back</button>
+              <button class="cat-scroll_forward material-symbols-outlined">arrow_forward</button>
+            </div>
+          </div>
+          <div class="cat-main flex items-center"></div>
+        </div>
+        <div class="artists text-white px-5">
+          <div class="art-header flex items-center justify-between pt-4 pb-2">
+            <h4 class="font-semibold text-xl">Popular Artists</h4>
+            <div class="leftRight">
+              <button class="art-scroll_back material-symbols-outlined">arrow_back</button>
+              <button class="art-scroll_forward material-symbols-outlined">arrow_forward</button>
+            </div>
+          </div>
+          <div class="art-main flex items-center gap-3"></div>
+        </div>
+      </main>
+      <footer
+        class="w-full px-5 py-4 text-white z-10 fixed bottom-0 flex items-center justify-center"
+      >
+        <div class="flex items-center w-full">
+          <div class="music flex items-center gap-4 w-1/4">
+            <div class="wave items-center justify-center pb-1 flex w-8 h-8">
+              <div class="wave1"></div>
+              <div class="wave1"></div>
+              <div class="wave1"></div>
+            </div>
+            <div class="playingNow flex">
+              <img class="w-10 h-10 mr-5" src="/src/ImgandAudio/img/1.jpg" />
+              <div class="detail">
+                <h5 class="text-white text-sm w-full line-clamp-1">Faded</h5>
+                <p class="text-xs w-full line-clamp-1">Alan Walker</p>
+              </div>
+            </div>
+          </div>
+          <div class="controller flex items-center justify-between w-3/4 px-5">
+            <div class="pause flex items-center">
+              <button id="previous_music" class="material-symbols-outlined">
+                skip_previous
+              </button>
+              <button id="play_music" class="material-symbols-outlined">
+                play_arrow
+              </button>
+              <button id="next_music" class="material-symbols-outlined">
+                skip_next
+              </button>
+            </div>
+            <div class="bar-container flex items-center justify-between gap-3">
+              <span class="currTime text-white text-xs w-8">0.00</span>
+              <div class="bar relative">
+                <input type="range" value="0" id="range" min="0" max="100" />
+                <div class="show-progress"></div>
+                <div class="bar_dot"></div>
+              </div>
+              <span class="endTime text-white text-xs w-8">0.00</span>
+            </div>
+            <div class="sound">
+              <span class="vol-sign material-symbols-outlined">
+                volume_down
+              </span>
+              <input type="range" value="0" id="volume" min="0" max="100" />
+              <div class="vol"></div>
+              <div class="sound_dot"></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

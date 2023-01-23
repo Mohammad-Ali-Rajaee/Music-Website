@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Page description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Listen and Fly</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="/build/style.css" />
+    <link rel="shortcut icon" href="/src/img/icon.png" type="image/png" />
+  </head>
+  <body class="relative">
+    <div class="slideshow-container w-full h-screen absolute">
+      <div class="mySlides fade">
+        <img class="h-screen w-full object-cover" src="/src/img/back0.jpg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img class="h-screen w-full object-cover" src="/src/img/back1.jpg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img class="h-screen w-full object-cover" src="/src/img/back2.jpg" />
+      </div>
+    </div>
+
+    <div
+      class="head-container w-full h-screen flex items-center justify-end pb-14 flex-col gap-28"
+    >
+      <form class="w-1/3 flex items-center relative">
+        <div class="w-full flex items-center">
+          <input
+            class="w-full pl-5 h-full focus-within:outline-none placeholder:text-white text-white"
+            type="text"
+            placeholder="Search ... "
+          />
+          <button
+            class="i-search absolute right-0 h-full flex items-center justify-center text-xl text-white"
+          ></button>
+        </div>
+      </form>
+      <div style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    <header class="p-header absolute top-0 left-0 right-0 w-full">
+      <div
+        class="header_inner h-full mx-auto xl:gap-20 justify-between flex items-center xl:justify-center"
+      >
+        <div class="p-logo">
+          <img src="/src/img/logo.png" />
+        </div>
+        <div class="c-buttons xl:block hidden h-full">
+          <div
+            class="button-container h-full text-white flex gap-10 justify-end items-center"
+          >
+            <button class="center w-max cursor-pointer relative">
+              <a href="#">Home</a>
+            </button>
+            <button class="center w-max cursor-pointer relative">
+              <a href="#categories">Categories</a>
+            </button>
+            <button class="center w-max cursor-pointer relative">About</button>
+            <button class="center w-max cursor-pointer relative">Login</button>
+          </div>
+        </div>
+        <div
+          class="p-contact xl:flex xl:items-center xl:justify-center hidden text-white"
+        >
+          <button class="center w-max cursor-pointer relative">
+            Contact Us
+          </button>
+        </div>
+        <div class="xl:hidden text-white center">
+          <button class="center w-max cursor-pointer relative">Menu</button>
+          <div class="menu">
+            <div class="hambergur">
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div
+        id="categories"
+        class="category--container relative page-section px-10 md:px-20 py-16"
+      >
+        <article
+          class="category--main grid grid-cols-1 sm:grid-cols-3 rounded-2xl"
+        >
+          <div
+            class="entry-container col-span-3 md:col-span-2 md:p-12 order-2 md:order-1 p-8 gap-8 flex flex-col justify-between"
+          >
+            <div class="section-header">
+              <h2 class="section-title text-white text-4xl font-bold">
+                Popular
+              </h2>
+            </div>
+            <!-- .section-header -->
+            <div class="entry-content text-white">
+              <p>
+                Identifying when nonetheless nonetheless became increasingly
+                differentiated generally from each other.Although much
+                distinguished the music that appears on record charts is seen as
+                pop music,...
+              </p>
+            </div>
+            <!-- .entry-content -->
+            <a
+              href="https://themepalacedemo.com/musicsong/music-is-my-escape/"
+              class="read-more w-max font-medium px-6 py-2 border border-white rounded-full"
+            >
+              Read More
+            </a>
+          </div>
+          <div
+            class="featured-image col-span-3 md:col-span-1 h-72 md:h-auto rounded-r-none rounded-t-2xl md:rounded-t-none md:rounded-r-2xl order-1 md:order-2"
+          ></div>
+          <div
+            class="categories flex flex-col px-3 gap-1.5 order-3 col-span-3 mt-1.5 pb-8"
+          ></div>
+        </article>
+      </div>
+
+      <div class="latest_release px-10 md:px-20 pb-20">
+        <h2 class="text-white text-5xl font-bold text-center py-20">
+          Latest Release
+        </h2>
+        <div
+          class="release_container grid sm:grid-cols-2 sm:grid-rows-2 grid-cols-1 gap-x-5 gap-y-4"
+        >
+          <div
+            class="release pl-5 pb-7 text-white text-xl font-medium rounded-xl cursor-pointer row-span-2 flex items-end justify-start"
+          >
+            Master Of Puppets
+          </div>
+          <div
+            class="release pl-5 pb-7 text-white text-xl font-medium rounded-xl cursor-pointer flex items-end justify-start"
+          >
+            High Way To Hell
+          </div>
+          <div
+            class="release pl-5 pb-7 text-white text-xl font-medium rounded-xl cursor-pointer flex items-end justify-start"
+          >
+            Music Got Beats
+          </div>
+        </div>
+      </div>
+
+      <div class="middle_container py-20 relative">
+        <div class="overlay absolute top-0 left-0 w-full h-full"></div>
+        <div class="wrapper mx-auto w-full flex flex-col relative z-10 gap-10">
+          <div class="section-header">
+            <h2 class="section-title text-white text-3xl font-bold text-center">
+              Music is My Escape
+            </h2>
+          </div>
+          <div class="section-content">
+            <p class="text-white text-base text-center mx-auto w-3/4">
+              Beat$ dominated the 2000s producing hits for artists like Beyoncé,
+              50 Cent and Lil’ Kim. Despite his hardships, Beat$ had one of the
+              most prolific...
+            </p>
+          </div>
+          <a
+            href="https://themepalacedemo.com/musicsong/music-is-my-escape/"
+            class="read-more mx-auto font-medium px-6 py-2 border border-white rounded-full"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+      <div class="page-section px-50 md:px-10 pb-10">
+        <div class="wrapper">
+          <h2
+            class="section-title px-50 md:px-10 text-white text-5xl font-bold py-20"
+          >
+            Loved by business and individuals across the globe.
+          </h2>
+          <div class="client-slider">
+            <div class="slick-track flex gap-7">
+              <article class="card-slide">
+                <div
+                  class="entry-container flex flex-col gap-6 p-10 rounded-2xl"
+                >
+                  <div class="entry-content leading-8">
+                    <p>
+                      Beats dominated the 2000s producing hits for artists like
+                      Beyoncé, 50 Cent and Lil’ Kim. Despite his hardships,
+                      Beat$ had one of the most prolific runs of any hip-hop
+                      producer.Lorem Ipsum is simply dummy text of the printing
+                      and typesetting...
+                    </p>
+                  </div>
+                  <!-- .entry-content -->
+
+                  <div class="header-wrapper center gap-5">
+                    <div class="featured-image">
+                      <img
+                        class="w-16 h-16 object-cover rounded-full"
+                        src="https://themepalacedemo.com/musicsong/wp-content/uploads/sites/108/2019/03/pexels-photo-324658-150x150.jpeg"
+                        alt="Andy"
+                      />
+                    </div>
+                    <!-- .featured-image -->
+
+                    <header class="entry-header">
+                      <h2 class="entry-title text-white text-xl font-medium">
+                        <a href="https://themepalacedemo.com/musicsong/andy/"
+                          >Andy</a
+                        >
+                      </h2>
+                    </header>
+                  </div>
+                  <!-- .header-wrapper -->
+                </div>
+                <!-- .entry-container -->
+              </article>
+              <article class="card-slide slick-active">
+                <div
+                  class="entry-container flex flex-col gap-6 p-10 rounded-2xl"
+                >
+                  <div class="entry-content leading-8">
+                    <p>
+                      It has survived not only five centuries, but also the leap
+                      into electronic typesetting, remaining essentially
+                      unchanged. It was popularised in the 1960s with the
+                      release of Letraset sheets containing Lorem Ipsum
+                      passages, and more recently with desktop publishing
+                      software...
+                    </p>
+                  </div>
+                  <div class="header-wrapper center gap-5">
+                    <div class="featured-image">
+                      <img
+                        class="w-16 h-16 object-cover rounded-full"
+                        src="https://themepalacedemo.com/musicsong/wp-content/uploads/sites/108/2019/03/pexels-photo-247322-150x150.jpeg"
+                        alt="Brock"
+                      />
+                    </div>
+                    <header class="entry-header">
+                      <h2 class="entry-title text-white text-xl font-medium">
+                        <a
+                          href="https://themepalacedemo.com/musicsong/brock/"
+                          tabindex="0"
+                          >Brock</a
+                        >
+                      </h2>
+                    </header>
+                  </div>
+                  <!-- .header-wrapper -->
+                </div>
+                <!-- .entry-container -->
+              </article>
+              <article class="card-slide slick-active">
+                <div
+                  class="entry-container flex flex-col gap-6 p-10 rounded-2xl"
+                >
+                  <div class="entry-content leading-8">
+                    <p>
+                      Beats dominated the 2000s producing hits for artists like
+                      Beyoncé, 50 Cent and Lil’ Kim. Despite his hardships,
+                      Beat$ had one of the most prolific runs of any hip-hop
+                      producer.Lorem Ipsum is simply dummy text of the printing
+                      and typesetting...
+                    </p>
+                  </div>
+                  <!-- .entry-content -->
+
+                  <div class="header-wrapper center gap-5">
+                    <div class="featured-image">
+                      <img
+                        class="w-16 h-16 object-cover rounded-full"
+                        src="https://themepalacedemo.com/musicsong/wp-content/uploads/sites/108/2019/03/pexels-photo-428341-150x150.jpeg"
+                        alt="Sam Thomas"
+                      />
+                    </div>
+
+                    <header class="entry-header">
+                      <h2 class="entry-title text-white text-xl font-medium">
+                        <a
+                          href="https://themepalacedemo.com/musicsong/sam-thomas/"
+                          tabindex="0"
+                          >Sam Thomas</a
+                        >
+                      </h2>
+                    </header>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="latest_blogs px-10 md:px-20 pb-20">
+        <h2 class="text-white text-5xl font-bold text-center py-20">
+          Our Latest Blogs
+        </h2>
+        <div
+          class="blogs_container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-x-4 gap-y-3"
+        >
+          <div class="blog-wrap col-span-1 p-3 cursor-pointer rounded-xl">
+            <div class="blog flex flex-col items-center justify-center gap-1">
+              <img src="/src/img/blog2.jpeg" class="rounded-xl" />
+              <h4 class="text-white text-xl">
+                Music Is The Voice Of The Angels
+              </h4>
+              <p class="text-base line-clamp-2">
+                It is a long established fact that a reader will be distracted
+                by the readable
+              </p>
+            </div>
+          </div>
+          <div
+            class="blog-wrap col-span-1 row-span-1 lg:col-span-2 lg:row-span-2 p-3 cursor-pointer rounded-xl"
+          >
+            <div class="blog flex flex-col items-center justify-start gap-1">
+              <img src="/src/img/blog1.jpeg" class="rounded-xl" />
+              <h4 class="text-white text-xl">
+                Music Is The Voice Of The Angels
+              </h4>
+              <p class="text-base line-clamp-2">
+                It is a long established fact that a reader will be distracted
+                by the readable
+              </p>
+            </div>
+          </div>
+          <div class="blog-wrap col-span-1 p-3 cursor-pointer rounded-xl">
+            <div class="blog flex flex-col items-center justify-center gap-1">
+              <img src="/src/img/blog3.jpeg" class="rounded-xl" />
+              <h4 class="text-white text-xl">
+                Music Is The Voice Of The Angels
+              </h4>
+              <p class="text-base line-clamp-2">
+                It is a long established fact that a reader will be distracted
+                by the readable
+              </p>
+            </div>
+          </div>
+          <div class="blog-wrap col-span-1 p-3 cursor-pointer rounded-xl">
+            <div class="blog flex flex-col items-center justify-center gap-1">
+              <img src="/src/img/blog4.jpeg" class="rounded-xl" />
+              <h4 class="text-white text-xl">
+                Music Is The Voice Of The Angels
+              </h4>
+              <p class="text-base line-clamp-2">
+                It is a long established fact that a reader will be distracted
+                by the readable
+              </p>
+            </div>
+          </div>
+          <div class="blog-wrap col-span-1 p-3 cursor-pointer rounded-xl">
+            <div class="blog flex flex-col items-center justify-center gap-1">
+              <img src="/src/img/blog5.jpeg" class="rounded-xl" />
+              <h4 class="text-white text-xl">
+                Music Is The Voice Of The Angels
+              </h4>
+              <p class="text-base line-clamp-2">
+                It is a long established fact that a reader will be distracted
+                by the readable
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/src/js/main.js" type="text/javascript"></script>
+  </body>
+</html>

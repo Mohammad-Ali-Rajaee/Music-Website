@@ -1,0 +1,127 @@
+@import "font";
+@import "fontIcon";
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+html {
+  font-family: "Montserrat";
+  scroll-behavior: smooth;
+}
+
+.p-header {
+  z-index: 2;
+  background-color: transparent;
+  padding: 30px 0;
+  .header_inner {
+    max-width: 1200px;
+
+    button {
+      transition: all 0.3s;
+      &:hover {
+        color: white;
+      }
+      &::after {
+        transition: all 0.3s;
+        content: "";
+        position: absolute;
+        height: 2px;
+        border-radius: 50rem;
+        width: 0%;
+        top: 100%;
+        left: 0;
+        background-color: #36e2ec;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      .hambergur {
+        .line {
+          position: relative;
+          background-color: #36e2ec;
+          height: 3px;
+          width: 25px;
+          transition: all 0.5s ease-in-out;
+          &::after,
+          &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            width: 25px;
+            height: 3px;
+            background-color: #36e2ec;
+          }
+          &::after {
+            top: -8px;
+          }
+        }
+        &.is-active .line {
+          transform: rotate(135deg);
+          &::after,
+          &::before {
+            top: 0;
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      &:hover {
+        .hambergur.is-active .line {
+          transform: rotate(225deg);
+        }
+      }
+    }
+  }
+  &.scrolled {
+    background-color: #202c36;
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    transition: all 0.5s;
+  }
+}
+
+
+form {
+    div {
+      height: 40px;
+      border-radius: 50rem;
+      background-color: rgb(184, 184, 184, 0.3);
+      input {
+        height: 100%;
+        background: transparent;
+        border-radius: 50rem;
+      }
+      button {
+        transition: background 0.3s;
+        border-radius: 50%;
+        padding: 0 10px;
+        &:hover {
+          background-color: rgb(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+
+.background {
+  background: url(/src/img/backhell.jpeg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
