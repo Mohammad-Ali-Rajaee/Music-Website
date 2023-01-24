@@ -13,12 +13,13 @@
     <link rel="shortcut icon" href="/src/img/icon.png" type="image/png" />
   </head>
   <body class="relative">
-    <div class="background w-full h-screen absolute">
-    </div>
+    <div class="background w-full h-screen absolute"></div>
+    <div class="background-wrapper w-full h-screen absolute"></div>
 
     <div
       class="head-container w-full h-screen flex items-center justify-end pb-14 flex-col gap-28"
     >
+      <h1 class="p-title text-white text-6xl z-10 mx-auto">High Way To Hell</h1>
       <form class="w-1/3 flex items-center relative">
         <div class="w-full flex items-center">
           <input
@@ -32,9 +33,9 @@
         </div>
       </form>
     </div>
-    <header class="p-header absolute top-0 left-0 right-0 w-full">
+    <header class="p-header absolute top-0 left-0 right-0 w-full z-50">
       <div
-        class="header_inner h-full mx-auto xl:gap-20 justify-between flex items-center xl:justify-center"
+        class="header_inner h-full w-5/6 mx-auto xl:gap-20 justify-between flex items-center xl:justify-center"
       >
         <div class="p-logo">
           <img src="/src/img/logo.png" />
@@ -44,10 +45,10 @@
             class="button-container h-full text-white flex gap-10 justify-end items-center"
           >
             <button class="center w-max cursor-pointer relative">
-              <a href="#">Home</a>
+              <a href="index.html">Home</a>
             </button>
             <button class="center w-max cursor-pointer relative">
-              <a href="#categories">Categories</a>
+              <a href="index.html/#categories">Categories</a>
             </button>
             <button class="center w-max cursor-pointer relative">About</button>
             <button class="center w-max cursor-pointer relative">Login</button>
@@ -60,7 +61,7 @@
             Contact Us
           </button>
         </div>
-        <div class="xl:hidden text-white center">
+        <div class="xl:hidden text-white center flex gap-2">
           <button class="center w-max cursor-pointer relative">Menu</button>
           <div class="menu">
             <div class="hambergur">
@@ -71,11 +72,306 @@
       </div>
     </header>
 
+    <main>
+      <div class="content-container grid grid-cols-3 pr-16 py-20 pl-5 md:pl-10">
+        <div
+          class="p-primary flex flex-col items-center gap-12 col-span-3 mr-0 md:mr-10 md:col-span-2 pl-5 md:pl-10"
+        >
+          <article class="main-article flex flex-col gap-4">
+            <span class="posted-on w-max rounded-sm font-medium text-xs">
+              <span class="screen-reader-text">Januray 22, 2023</span>
+            </span>
+            <!-- .entry-meta -->
 
+            <div class="entry-container">
+              <div class="entry-content text-base leading-8 font-normal">
+                <p>
+                  Highway to Hell is the sixth studio album by Australian hard
+                  rock band AC/DC, released on 27 July 1979. It was the band’s
+                  fifth studio album released internationally and the sixth to
+                  be released in Australia. It was the last album featuring lead
+                  singer Bon Scott, who died early the following year on 19
+                  February 1980.Being told what to do was bad enough but what
+                  really pissed off Malcolm and Angus was they felt that George
+                  was being treated disrespectfully by Atlantic, like an amateur
+                  with no great track record when it came to production …
+                  Malcolm seemed less pleased with the situation and went so far
+                  as to tell Radio 2JJ in Sydney that the band had been
+                  virtually “forced” to go with an outside producer. Losing
+                  Harry was one thing. Losing George was almost literally like
+                  losing a sixth member of the band, and much more.
+                </p>
+              </div>
+            </div>
 
+            <div class="entry-meta">
+              <span class="byline">
+                By:
+                <span class="author"><button>Ali Rajaee</button></span></span
+              >
+            </div>
+          </article>
+          <div
+            class="changePages px-5 py-7 rounded-sm w-full flex items-center justify-between"
+          >
+            <div class="previousPage flex items-center gap-3">
+              <span class="material-symbols-outlined"> navigate_before </span
+              >Previous Blog
+            </div>
+            <div class="nextPage flex items-center gap-3">
+              Next Blog
+              <span class="material-symbols-outlined"> navigate_next </span>
+            </div>
+          </div>
 
+          <div class="comment-respond w-full flex flex-col items-start gap-8">
+            <h3 class="comment-reply-title text-white text-4xl">
+              Leave a Reply
+            </h3>
+            <form class="comment-form w-full flex flex-col items-start gap-4">
+              <span class="italic text-sm"
+                >Your email address will not be published. Required fields are
+                marked <span class="required">*</span></span
+              >
+              <p class="comment-form-comment w-full flex flex-col gap-3">
+                <label for="comment"
+                  >Comment <span class="required">*</span></label
+                >
+                <textarea
+                  id="comment"
+                  class="input w-full h-48 p-5 resize-none"
+                  required=""
+                ></textarea>
+              </p>
+              <p class="comment-form-author w-full flex flex-col gap-3">
+                <label for="author">Name <span class="required">*</span></label>
+                <input
+                  id="author"
+                  class="input w-full p-5"
+                  type="text"
+                  required=""
+                />
+              </p>
+              <p class="comment-form-email w-full flex flex-col gap-3">
+                <label for="email">Email <span class="required">*</span></label>
+                <input
+                  id="email"
+                  type="email"
+                  class="input w-full p-5"
+                  required=""
+                />
+              </p>
+              <p class="comment-form-url w-full flex flex-col gap-3">
+                <label for="url">Website</label>
+                <input id="url" type="url" class="input w-full p-5" />
+              </p>
+              <p class="comment-form-cookies-consent flex items-center gap-3">
+                <input
+                  id="wp-comment-cookies-consent"
+                  type="checkbox"
+                  value="yes"
+                />
+                <label for="wp-comment-cookies-consent"
+                  >Save my name, email, and website in this browser for the next
+                  time I comment.</label
+                >
+              </p>
+              <p
+                class="form-submit my-5 px-10 py-3 rounded-full text-white text-lg"
+              >
+                <input type="submit" class="submit" />
+              </p>
+            </form>
+          </div>
+        </div>
+        <!-- aside -->
+        <aside
+          class="p-secondary flex flex-col gap-6 col-span-3 px-4 md:col-span-1"
+        >
+          <section
+            class="p-recentPosts flex flex-col gap-6 py-10 px-7 rounded-xl"
+          >
+            <h2 class="text-white font-medium text-2xl text-center">
+              Recent Posts
+            </h2>
+            <ul class="flex flex-col gap-4 text-base">
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a
+                  href="https://themepalacedemo.com/musicsong/2019/03/14/getting-down-with-my-sounds/"
+                  >Getting down with my sounds</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a
+                  href="https://themepalacedemo.com/musicsong/2019/03/14/make-your-own-kind-of-music/"
+                  >Make Your Own Kind Of Music</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right
+                </span>
+                <a
+                  href="https://themepalacedemo.com/musicsong/2019/03/14/music-is-the-voice-of-the-angels/"
+                  >Music Is The Voice Of The Angels</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a
+                  href="https://themepalacedemo.com/musicsong/2019/03/14/if-you-cant-make-music-then-make-noise/"
+                  >If You Can’t Make Music, Then Make Noise!</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a
+                  href="https://themepalacedemo.com/musicsong/2019/03/14/these-are-the-days-that-youll-remember/"
+                  >These are the days, that you’ll remember</a
+                >
+              </li>
+            </ul>
+          </section>
+          <section
+            class="p-recentComments flex flex-col gap-6 py-10 px-7 rounded-xl"
+          >
+            <h2 class="text-white font-medium text-2xl text-center">
+              Recent Comments
+            </h2>
+            <ul class="flex flex-col gap-4 text-base"></ul>
+          </section>
+          <section class="p-archives flex flex-col gap-6 py-10 px-7 rounded-xl">
+            <h2 class="text-white font-medium text-2xl text-center">
+              Archives
+            </h2>
+            <ul class="flex flex-col gap-4 text-base">
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right
+                </span>
+                <a href="https://themepalacedemo.com/musicsong/2019/03/"
+                  >March 2019</a
+                >
+              </li>
+            </ul>
+          </section>
+          <section
+            class="p-categories flex flex-col gap-6 py-10 px-7 rounded-xl"
+          >
+            <h2 class="text-white font-medium text-2xl text-center">
+              Categories
+            </h2>
+            <ul class="flex flex-col gap-4 text-base">
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a
+                  href="https://themepalacedemo.com/musicsong/category/collection/"
+                  >Collection</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a href="https://themepalacedemo.com/musicsong/category/dj/"
+                  >DJ</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a
+                  href="https://themepalacedemo.com/musicsong/category/electric-guitar/"
+                  >Electric Guitar</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a
+                  href="https://themepalacedemo.com/musicsong/category/music4/"
+                  >Music4</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a
+                  href="https://themepalacedemo.com/musicsong/category/saxophone/"
+                  >Saxophone</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a href="https://themepalacedemo.com/musicsong/category/songs/"
+                  >Songs</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a href="https://themepalacedemo.com/musicsong/category/team/"
+                  >Team</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a href="https://themepalacedemo.com/musicsong/category/tour/"
+                  >Tour</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a
+                  href="https://themepalacedemo.com/musicsong/category/uncategorized/"
+                  >Uncategorized</a
+                >
+              </li>
+            </ul>
+          </section>
+          <section class="p-meta flex flex-col gap-6 py-10 px-7 rounded-xl">
+            <h2 class="text-white font-medium text-2xl text-center">Meta</h2>
+            <ul class="flex flex-col gap-4 text-base">
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a href="https://themepalacedemo.com/musicsong/wp-login.php"
+                  >Log in</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a href="https://themepalacedemo.com/musicsong/feed/"
+                  >Entries feed</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-lg material-symbols-outlined">
+                  keyboard_double_arrow_right </span
+                ><a href="https://themepalacedemo.com/musicsong/comments/feed/"
+                  >Comments feed</a
+                >
+              </li>
 
-    
+              <li class="flex items-center gap-2">
+                <a href="https://wordpress.org/">WordPress.org</a>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </main>
+
     <script src="/src/js/hell.js" type="text/javascript"></script>
   </body>
 </html>

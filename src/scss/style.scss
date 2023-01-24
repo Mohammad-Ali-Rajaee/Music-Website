@@ -1,5 +1,6 @@
 @import "font";
 @import "fontIcon";
+@import "variables";
 
 @tailwind base;
 @tailwind utilities;
@@ -30,27 +31,14 @@ body {
     opacity: 1;
   }
 }
-.p-background0 {
-  background-image: url(/src/img/back0.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-}
-.show {
-  opacity: 1;
-  display: block;
-}
-.hide {
-  opacity: 0;
-  display: none;
-}
-.p-background1 {
-  background-image: url(/src/img/back1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
+
+.back-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $bg-wrapper;
 }
 
 .center {
@@ -59,6 +47,8 @@ body {
   justify-content: center;
 }
 .head-container {
+  max-width: 1200px;
+  margin: 0 auto;
   height: 100vh;
   position: relative;
   z-index: 2;
@@ -72,12 +62,12 @@ body {
     background: #eee;
     transition: all 0.3s;
     &:hover {
-      background-color: #36e2ec;
+      background-color: $aqua-color;
     }
   }
 }
 .cat {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: $black-four;
   transition: all 0.3s;
   &:hover {
     background-color: rgb(75 85 99);
@@ -85,19 +75,23 @@ body {
 }
 
 .dropdown {
-  background-color: #202c36;
+  background-color: $bg-primary;
 }
 .p-header {
-  z-index: 2;
   background-color: transparent;
   padding: 30px 0;
   .header_inner {
     max-width: 1200px;
 
+    .p-logo {
+      font-family: "courgette";
+      color: $aqua-color;
+    }
+
     button {
       transition: all 0.3s;
       &:hover {
-        color: white;
+        color: $white;
       }
       &::after {
         transition: all 0.3s;
@@ -108,7 +102,7 @@ body {
         width: 0%;
         top: 100%;
         left: 0;
-        background-color: #36e2ec;
+        background-color: $aqua-color;
       }
       &:hover::after {
         width: 100%;
@@ -123,7 +117,7 @@ body {
       .hambergur {
         .line {
           position: relative;
-          background-color: #36e2ec;
+          background-color: $aqua-color;
           height: 3px;
           width: 25px;
           transition: all 0.5s ease-in-out;
@@ -134,7 +128,7 @@ body {
             top: 8px;
             width: 25px;
             height: 3px;
-            background-color: #36e2ec;
+            background-color: $aqua-color;
           }
           &::after {
             top: -8px;
@@ -158,11 +152,11 @@ body {
     }
   }
   &.scrolled {
-    background-color: #202c36;
+    background-color: $bg-primary;
     position: fixed;
     top: 0;
     padding: 10px 0;
-    transition: all .5s;
+    transition: all 0.5s;
   }
 }
 
@@ -170,7 +164,7 @@ form {
   div {
     height: 40px;
     border-radius: 50rem;
-    background-color: rgb(184, 184, 184, 0.3);
+    background-color: $bg-form;
     input {
       height: 100%;
       background: transparent;
@@ -181,7 +175,7 @@ form {
       border-radius: 50%;
       padding: 0 10px;
       &:hover {
-        background-color: rgb(255, 255, 255, 0.2);
+        background-color: $white-five;
       }
     }
   }
@@ -193,14 +187,14 @@ form {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: $white-five;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active {
-  background-color: #36e2ec;
+  background-color: $aqua-color;
 }
 
 /* Fading animation */
@@ -218,103 +212,161 @@ form {
   }
 }
 
-.latest_release {
-  background-color: #202c36;
-  .release {
-    min-height: 250px;
+main {
+  width: 100%;
+  .category--container {
+    background-color: $bg-primary;
+    .category--main {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: $bg-secondary;
+      .featured-image {
+        background: url(/src/img/popSong.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .entry-container {
+        .entry-content {
+          color: $white-two;
+        }
+      }
+      .categories {
+        max-height: 430px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 8px;
+          cursor: pointer;
+        }
+        &::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 6px $black-four;
+          border-radius: 50rem;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $aqua-color;
+          outline: 1px solid $bg-secondary;
+          border-radius: 50rem;
+        }
+      }
+    }
+  }
+
+  .p-latest_release {
+    background-color: $bg-primary;
+    .p-latest-release__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      .release {
+        min-height: 250px;
+        transition: all 0.3s;
+        &:hover {
+          color: $white-two;
+        }
+        &:nth-child(1) {
+          background-image: url(/src/img/release1.jpeg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &:nth-child(2) {
+          background-image: url(/src/img/release2.jpeg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &:nth-child(3) {
+          background-image: url(/src/img/release3.jpeg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  .page-section {
+    background-color: $bg-secondary;
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      .section-title {
+        max-width: 50rem;
+      }
+      .card-wrapper {
+        transition: all 0.3s;
+        cursor: pointer;
+        .entry-container {
+          .entry-content {
+            color: $white-two;
+          }
+        }
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.05);
+          box-shadow: 0px 50px 50px 0px rgb(0 0 0 / 10%);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  .middle_container {
+    .overlay {
+      background-color: black;
+      opacity: 0.2;
+    }
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      .section-title {
+        font-family: "courgette";
+      }
+    }
+  }
+
+  .read-more {
+    border: 1px solid $aqua-color;
+    color: $aqua-color;
     transition: all 0.3s;
     &:hover {
-      color: rgba(255, 255, 255, 0.75);
-    }
-    &:nth-child(1) {
-      background-image: url(/src/img/release1.jpeg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    &:nth-child(2) {
-      background-image: url(/src/img/release2.jpeg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    &:nth-child(3) {
-      background-image: url(/src/img/release3.jpeg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-color: $aqua-color;
+      color: $white;
+      border: 1px solid $aqua-color;
     }
   }
-}
 
-.category--container {
-  background-color: #202c36;
-  .category--main {
-    background-color: #2b3844;
-    .featured-image {
-      background: url(/src/img/popSong.jpeg);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .entry-container {
-      .entry-content {
-        color: rgba(255, 255, 255, 0.5);
-      }
-    }
-    .categories {
-      max-height: 430px;
-      overflow-y: auto;
-      &::-webkit-scrollbar {
-        width: 8px;
+  .latest_blogs {
+    background-color: $bg-primary;
+    .p-latest-blogs__container {
+      max-width: 1200px;
+      .blog-wrap {
+        transition: all 0.3s;
         cursor: pointer;
-      }
-      &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        border-radius: 50rem;
-      }
-      &::-webkit-scrollbar-thumb {
-        background-color: #36e2ec;
-        outline: 1px solid #2b3844;
-        border-radius: 50rem;
-      }
-    }
-  }
-}
-
-.page-section {
-  background-color: #2b3844;
-  .section-title {
-    max-width: 50rem;
-  }
-  .card-slide {
-    .entry-container {
-      transition: all 0.3s;
-      cursor: pointer;
-      .entry-content {
-        color: rgb(255, 255, 255, 0.5);
-      }
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.05);
-        box-shadow: 0px 50px 50px 0px rgb(0 0 0 / 10%);
-        transform: scale(1.05);
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.05);
+          box-shadow: 0px 50px 50px 0px rgb(0 0 0 / 10%);
+          p {
+            color: rgb(255, 255, 255, 0.75);
+          }
+        }
+        p {
+          color: $white-two;
+        }
       }
     }
   }
 }
-
 body::-webkit-scrollbar {
   width: 8px;
   cursor: pointer;
 }
 body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #202c36;
+  box-shadow: inset 0 0 6px $black-four;
+  background-color: $bg-primary;
   border-radius: 50rem;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #36e2ec;
-  outline: 1px solid #2b3844;
+  background-color: $aqua-color;
+  outline: 1px solid $bg-primary;
   border-radius: 50rem;
   transition: all 0.3s;
   &:hover {
@@ -322,36 +374,26 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.overlay {
-  background-color: rgb(0, 0, 0);
-  opacity: 0.2;
-}
-
-.read-more {
-  border: 1px solid #36e2ec;
-  color: #36e2ec;
-  transition: all 0.3s;
-  &:hover {
-    background-color: #36e2ec;
-    color: white;
-    border: 1px solid #36e2ec;
-  }
-}
-
-.latest_blogs {
-  background-color: #202c36;
-  .blog-wrap {
-    transition: all 0.3s;
-    cursor: pointer;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.05);
-      box-shadow: 0px 50px 50px 0px rgb(0 0 0 / 10%);
-      p {
-        color: rgb(255, 255, 255, 0.75);
+.p-footer {
+  background-color: $bg-secondary;
+  color: $white-two;
+  .p-footer__inner {
+    max-width: 1200px;
+    li {
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        color: white;
       }
     }
-    p {
-      color: rgba(255, 255, 255, 0.5);
+    .footer__logo {
+      h2 {
+        font-family: "courgette";
+        color: $aqua-color;
+      }
+      p {
+        color: $white-two;
+      }
     }
   }
 }

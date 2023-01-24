@@ -1,5 +1,6 @@
 @import "font";
 @import "fontIcon";
+@import "variables";
 
 @tailwind base;
 @tailwind utilities;
@@ -17,8 +18,26 @@ html {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+  cursor: pointer;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px $black-four;
+  background-color: $bg-primary;
+  border-radius: 50rem;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: $aqua-color;
+  outline: 1px solid $bg-primary;
+  border-radius: 50rem;
+  transition: all 0.3s;
+  &:hover {
+    width: 0.5rem;
+  }
+}
+
 .p-header {
-  z-index: 2;
   background-color: transparent;
   padding: 30px 0;
   .header_inner {
@@ -27,7 +46,7 @@ html {
     button {
       transition: all 0.3s;
       &:hover {
-        color: white;
+        color: $white;
       }
       &::after {
         transition: all 0.3s;
@@ -38,7 +57,7 @@ html {
         width: 0%;
         top: 100%;
         left: 0;
-        background-color: #36e2ec;
+        background-color: $aqua-color;
       }
       &:hover::after {
         width: 100%;
@@ -53,7 +72,7 @@ html {
       .hambergur {
         .line {
           position: relative;
-          background-color: #36e2ec;
+          background-color: $aqua-color;
           height: 3px;
           width: 25px;
           transition: all 0.5s ease-in-out;
@@ -64,7 +83,7 @@ html {
             top: 8px;
             width: 25px;
             height: 3px;
-            background-color: #36e2ec;
+            background-color: $aqua-color;
           }
           &::after {
             top: -8px;
@@ -88,7 +107,7 @@ html {
     }
   }
   &.scrolled {
-    background-color: #202c36;
+    background-color: $bg-primary;
     position: fixed;
     top: 0;
     padding: 10px 0;
@@ -96,32 +115,106 @@ html {
   }
 }
 
-
 form {
-    div {
-      height: 40px;
+  div {
+    height: 40px;
+    border-radius: 50rem;
+    background-color: $bg-form;
+    input {
+      height: 100%;
+      background: transparent;
       border-radius: 50rem;
-      background-color: rgb(184, 184, 184, 0.3);
-      input {
-        height: 100%;
-        background: transparent;
-        border-radius: 50rem;
-      }
-      button {
-        transition: background 0.3s;
-        border-radius: 50%;
-        padding: 0 10px;
-        &:hover {
-          background-color: rgb(255, 255, 255, 0.2);
-        }
+    }
+    button {
+      transition: background 0.3s;
+      border-radius: 50%;
+      padding: 0 10px;
+      &:hover {
+        background-color: $white-five;
       }
     }
   }
-
+}
 .background {
   background: url(/src/img/backhell.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.background-wrapper {
+  top: 0;
+  left: 0;
+  background-color: $bg-wrapper;
+}
+
+.p-title {
+  font-family: "courgette";
+}
+
+main {
+  background-color: $bg-primary;
+  .content-container {
+    .p-primary {
+      .main-article {
+        .posted-on {
+          background-color: $aqua-color;
+          padding: 7px 10px;
+          color: $bg-primary;
+        }
+        .entry-content {
+          color: $white-two;
+        }
+        .entry-meta {
+          color: $white-two;
+          .author {
+            color: white;
+          }
+        }
+      }
+      .changePages {
+        background-color: $bg-secondary;
+        color: $white-two;
+        div {
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+      .comment-form {
+        color: $white-two;
+        .input {
+          background-color: $bg-secondary;
+          outline: none;
+          color: white;
+        }
+        .form-submit {
+          border: 1px solid $aqua-color;
+          transition: all 0.3s;
+          cursor: pointer;
+          input {
+            cursor: pointer;
+          }
+          &:hover {
+            background-color: $aqua-color;
+            color: $bg-primary;
+          }
+        }
+      }
+    }
+    .p-secondary {
+      color: white;
+      section {
+        background-color: $bg-secondary;
+        li {
+          transition: all 0.3s;
+          &:hover {
+            color: $white-two;
+          }
+        }
+      }
+    }
+  }
 }
