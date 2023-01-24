@@ -218,3 +218,27 @@ main {
     }
   }
 }
+
+.p-footer {
+  background-color: $bg-secondary;
+  color: $white-two;
+  .p-footer__inner {
+    max-width: 1200px;
+    li {
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        color: white;
+      }
+    }
+    .footer__logo {
+      h2 {
+        font-family: "courgette";
+        color: $aqua-color;
+      }
+      p {
+        color: $white-two;
+      }
+    }
+  }
+}
