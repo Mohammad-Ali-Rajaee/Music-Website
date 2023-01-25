@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background-image: url(/src/img/body-back2.jpg);
+  background-image: url(../src/img/body-back2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -221,7 +221,7 @@ main {
       margin: 0 auto;
       background-color: $bg-secondary;
       .featured-image {
-        background: url(../img/popSong.jpeg);
+        background: url(../src/img/popSong.jpeg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -263,19 +263,19 @@ main {
           color: $white-two;
         }
         &:nth-child(1) {
-          background-image: url(../img/release1.jpeg);
+          background-image: url(../src/img/release1.jpeg);
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
         }
         &:nth-child(2) {
-          background-image: url(../img/release2.jpeg);
+          background-image: url(../src/img/release2.jpeg);
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
         }
         &:nth-child(3) {
-          background-image: url(../img/release3.jpeg);
+          background-image: url(../src/img/release3.jpeg);
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
