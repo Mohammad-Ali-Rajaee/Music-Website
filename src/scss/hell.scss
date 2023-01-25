@@ -42,7 +42,10 @@ body::-webkit-scrollbar-thumb {
   padding: 30px 0;
   .header_inner {
     max-width: 1200px;
-
+    .p-logo {
+      font-family: "courgette";
+      color: $aqua-color;
+    }
     button {
       transition: all 0.3s;
       &:hover {
@@ -210,6 +213,7 @@ main {
         background-color: $bg-secondary;
         li {
           transition: all 0.3s;
+          cursor: pointer;
           &:hover {
             color: $white-two;
           }

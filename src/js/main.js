@@ -71,7 +71,7 @@ const start = async () => {
                      return `
                     <li id="${el.id}" class="playlist">
                     <a
-                    href="../../pages/play.html"
+                    href="./pages/play.html"
                     class="flex items-center gap-3 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     ><span class="text-lg material-symbols-outlined">
                     playlist_play

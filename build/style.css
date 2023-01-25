@@ -49,7 +49,7 @@
 }
 @font-face {
   font-family: "fontIcon";
-  src: url("/src/font/fontIcon/fontIcon.woff") format("woff"), url("/src/font/fontIcon/fontIcon.ttf") format("truetype");
+  src: url("../src/font/fontIcon/fontIcon.woff") format("woff"), url("../src/font/fontIcon/fontIcon.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: block;

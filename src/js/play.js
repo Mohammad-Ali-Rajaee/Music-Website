@@ -148,8 +148,8 @@ const start = async () => {
       return new Promise((resolve) => {
         if (musicId === "faded") {
           let faded = { name: "Faded", artist: ["Alan Walker"] };
-          playingBox("/src/ImgandAudio/img/1.jpg", faded.name, faded.artist);
-          music.src = "/src/ImgandAudio/audio/1.mp3";
+          playingBox("../src/ImgandAudio/img/1.jpg", faded.name, faded.artist);
+          music.src = "../src/ImgandAudio/audio/1.mp3";
           music.id = "faded";
           music.play();
           resolve();

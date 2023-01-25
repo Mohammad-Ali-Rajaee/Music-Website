@@ -49,7 +49,7 @@
 }
 @font-face {
   font-family: "fontIcon";
-  src: url("/src/font/fontIcon/fontIcon.woff") format("woff"), url("/src/font/fontIcon/fontIcon.ttf") format("truetype");
+  src: url("../src/font/fontIcon/fontIcon.woff") format("woff"), url("../src/font/fontIcon/fontIcon.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -1317,6 +1317,11 @@ body::-webkit-scrollbar-thumb:hover {
   max-width: 1200px;
 }
 
+.p-header .header_inner .p-logo {
+  font-family: "courgette";
+  color: #36e2ec;
+}
+
 .p-header .header_inner button {
   transition: all 0.3s;
 }
@@ -1416,7 +1421,7 @@ form div button:hover {
 }
 
 .background {
-  background: url(/src/img/backhell.jpeg);
+  background: url(../src/img/backhell.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1504,6 +1509,7 @@ main .content-container .p-secondary section {
 
 main .content-container .p-secondary section li {
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 main .content-container .p-secondary section li:hover {

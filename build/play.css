@@ -49,7 +49,7 @@
 }
 @font-face {
   font-family: "fontIcon";
-  src: url("/src/font/fontIcon/fontIcon.woff") format("woff"), url("/src/font/fontIcon/fontIcon.ttf") format("truetype");
+  src: url("../src/font/fontIcon/fontIcon.woff") format("woff"), url("../src/font/fontIcon/fontIcon.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -1538,7 +1538,7 @@ main {
 main::before {
   position: absolute;
   content: "";
-  background-image: url(/src/ImgandAudio/bg.png);
+  background-image: url(../src/ImgandAudio/bg.png);
   width: 100%;
   height: 300px;
   z-index: -1;
