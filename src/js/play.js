@@ -290,7 +290,7 @@ const start = async () => {
 
     /* showing popular songs -------------- */
     function showPopularSong(name, img, artistsNames, id) {
-      catMain.innerHTML += `<div id="${id}" class="pop-song flex flex-col items-center px-2 gap-2">
+      catMain.innerHTML += `<div id="${id}" title="${name}" class="pop-song flex flex-col items-center px-2 gap-2">
       <img
         class="w-32 h-28 object-cover"
         src="${img}"
