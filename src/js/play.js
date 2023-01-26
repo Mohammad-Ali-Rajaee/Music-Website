@@ -144,6 +144,8 @@ const start = async () => {
       }
     }
 
+    let time = 0;
+
     function playNow(musicId) {
       return new Promise((resolve) => {
         if (musicId === "faded") {
@@ -151,6 +153,7 @@ const start = async () => {
           playingBox("../src/ImgandAudio/img/1.jpg", faded.name, faded.artist);
           music.src = "../src/ImgandAudio/audio/1.mp3";
           music.id = "faded";
+          music.currentTime = time;
           music.play();
           resolve();
         } else {
@@ -163,6 +166,7 @@ const start = async () => {
               );
               music.id = musicId;
               music.src = track.preview_url;
+              music.currentTime = time;
               music.play();
               resolve();
             })
@@ -244,11 +248,13 @@ const start = async () => {
       next();
     });
 
+
     play_btn.addEventListener("click", () => {
       let currentMusic = music.id;
       if (music.paused) {
         playNow(currentMusic).then(() => styleCurrentPlaying());
       } else {
+        time = music.currentTime;
         makeAllPause();
       }
     });
@@ -364,10 +370,3 @@ const start = async () => {
   getTracks(playlist_id);
 };
 start();
-
-// let header = document.querySelector(".p-header");
-// if (window.pageYOffset > 0) {
-//   header.classList.add("scrolled");
-// } else {
-//   header.classList.remove("scrolled");
-// }
