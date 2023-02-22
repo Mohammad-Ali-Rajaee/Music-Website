@@ -1,0 +1,72 @@
+.p-header {
+  background-color: #1b2039;
+}
+
+.p-header .p-header-container form input::placeholder {
+  color: #777;
+}
+
+.p-header .p-header-container form:has(> input:focus-within) {
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.p-header .p-header-container form span {
+  background-color: #3bc8e7;
+}
+
+.p-header .p-header-container .p-header__trend .trend-btn {
+  color: #3bc8e7;
+}
+
+.p-header .p-header-container .p-header__buttons .sign-btn {
+  background-color: #3bc8e7;
+  transition: all 0.3s;
+}
+
+.p-header .p-header-container .p-header__buttons .sign-btn:hover {
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.p-header .p-header-container .p-header__buttons .menu__container .menu {
+  display: flex;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.p-header .p-header-container .p-header__buttons .menu__container .menu .hambergur .line {
+  position: relative;
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  transition: all 0.5s ease-in-out;
+}
+
+.p-header .p-header-container .p-header__buttons .menu__container .menu .hambergur .line::after,
+.p-header .p-header-container .p-header__buttons .menu__container .menu .hambergur .line::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+.p-header .p-header-container .p-header__buttons .menu__container .menu .hambergur .line::after {
+  top: -8px;
+}
+
+.p-header .p-header-container .p-header__buttons .menu__container .menu .hambergur.is-active .line {
+  transform: rotate(135deg);
+}
+
+.p-header .p-header-container .p-header__buttons .menu__container .menu .hambergur.is-active .line::after,
+.p-header .p-header-container .p-header__buttons .menu__container .menu .hambergur.is-active .line::before {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.p-header .p-header-container .p-header__buttons .menu__container .menu:hover .hambergur.is-active .line {
+  transform: rotate(225deg);
+}

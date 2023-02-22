@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.html" , "./src/js/**/*.js"],
+  content: ["./music-react/src/**/*.js"],
   theme: {
     extend: {
       screens: {
         'sm': '640px',
         'md' : '768px',
-        'lg': '915px',
+        'lg': '992px',
         'xl' : '1280px',
         '2xl': '1536px',
       },

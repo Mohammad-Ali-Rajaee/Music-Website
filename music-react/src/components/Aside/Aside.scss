@@ -1,0 +1,28 @@
+@import "../../variables";
+
+.p-aside {
+  .p-aside__container {
+    background-color: $LighterBG;
+    box-shadow: $AsideBS;
+    .p-aside__logo {
+      background-color: $Aqua;
+      box-shadow: $BoxShadow;
+    }
+    .p-aside__menu {
+      .menu__stream {
+        li {
+            width: 25px;
+            height: 25px;
+          * {
+            color: white;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+          }
+        }
+      }
+    }
+  }
+}

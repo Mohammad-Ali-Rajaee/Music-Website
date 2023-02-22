@@ -6,16 +6,16 @@ const postcss = require("gulp-postcss");
 
 gulp.task("build", () => {
   return gulp
-    .src("./src/scss/**/*.scss")
+    .src("./music-react/src/**/*.scss")
     .pipe(postcss([require("tailwindcss/nesting"), require("tailwindcss")]))
     .pipe(sass())
-    .pipe(gulp.dest("./build/"));
+    .pipe(gulp.dest("./music-react/src"));
 });
 
 
 gulp.task("watch", function () {
   gulp.watch(
-    ["./src/scss/**/*.scss" , "./**/*.html","./src/js/**/*.js"],
+    ["./music-react/src/**/*.scss" , "./music-react/src/**/*.js"],
     gulp.series("build")
   );
 });

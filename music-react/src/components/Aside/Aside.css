@@ -1,0 +1,22 @@
+.p-aside .p-aside__container {
+  background-color: #1b2039;
+  box-shadow: 0px 0px 24px 6px rgba(4, 4, 4, 0.2);
+}
+
+.p-aside .p-aside__container .p-aside__logo {
+  background-color: #3bc8e7;
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.p-aside .p-aside__container .p-aside__menu .menu__stream li {
+  width: 25px;
+  height: 25px;
+}
+
+.p-aside .p-aside__container .p-aside__menu .menu__stream li * {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
